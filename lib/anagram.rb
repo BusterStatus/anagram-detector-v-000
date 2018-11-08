@@ -1,15 +1,16 @@
-# Your code goes here!
 class Anagram
   
-  def initialize(word)
-    @word = word
+  def initialize(string)
+    @word = string
   end
   
   def match(anagrams)
-    word_array = @word.split
+    word_array = @word.split("")
+    word_array
     matches = []
     anagrams.each do |anagram|
-      if anagram.split.sort == word_array.sort
+      split_anagram = anagram.split("")
+      if split_anagram.sort == word_array.sort
         matches << anagram
       end
     end
