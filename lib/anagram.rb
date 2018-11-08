@@ -11,10 +11,9 @@ class Anagram
     anagrams.each do |anagram|
       if anagram.split.sort == word_array.sort
         matches << anagram
-      else
-        matches
       end
     end
+    matches
   end
   
 end
